@@ -6,8 +6,8 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 export default function Home() {
   return (
     <>
-      <main className="w-full min-h-screen bg-[#f3e6d8ff] flex justify-center items-center sm:pt-[10vh] sm:pb-[10vh]">
-        <div className="w-3xl h-full bg-white sm:rounded-2xl overflow-hidden">
+      <main className="w-full min-h-screen bg-[#f3e6d8ff] flex justify-center items-center sm:pt-24 sm:pb-24 ">
+        <div className="w-3xl bg-white sm:rounded-2xl overflow-hidden">
           <div className="sm:p-10 sm:pb-0">
             <img
               src="/assets/images/image-omelette.jpeg"
