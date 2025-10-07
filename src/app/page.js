@@ -27,11 +27,11 @@ export default function Home() {
               filled with your choice of cheese, vegetables, or meats.
             </p>
             <div className="p-6 rounded-2xl bg-[#fff5faff]">
-              <h3
+              <h2
                 className={`${outfit.className} font-bold text-[#7b284fff] pb-2 text-[18px]`}
               >
                 Preparation time
-              </h3>
+              </h2>
               <ul className="list-disc list-inside space-y-1">
                 <li
                   className={`${outfit.className} ml-2 marker:text-[#7b284fff]`}
