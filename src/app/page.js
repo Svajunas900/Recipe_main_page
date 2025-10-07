@@ -6,13 +6,13 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 export default function Home() {
   return (
     <>
-      <div className="w-full h-full bg-[#f3e6d8ff] flex justify-center items-center sm:pt-[10vh] sm:pb-[10vh]">
-        <div className="w-3xl h-full bg-white rounded-2xl overflow-hidden">
+      <main className="w-full min-h-screen bg-[#f3e6d8ff] flex justify-center items-center sm:pt-[10vh] sm:pb-[10vh]">
+        <div className="w-3xl h-full bg-white sm:rounded-2xl overflow-hidden">
           <div className="sm:p-10 sm:pb-0">
             <img
               src="/assets/images/image-omelette.jpeg"
               alt="Omelette"
-              className="w-full rounded-2xl"
+              className="w-full sm:rounded-2xl"
             />
           </div>
           <div className="p-10 pt-4">
@@ -30,32 +30,31 @@ export default function Home() {
               <h3
                 className={`${outfit.className} font-bold text-[#7b284fff] pb-2 text-[18px]`}
               >
-                Preparation time{" "}
+                Preparation time
               </h3>
               <ul className="list-disc list-inside space-y-1">
                 <li
                   className={`${outfit.className} ml-2 marker:text-[#7b284fff]`}
                 >
                   <span className={`${outfit.className} font-bold ml-4`}>
-                    Total:
-                  </span>{" "}
+                    Total:{" "}
+                  </span>
                   Approximately 10 minutes
                 </li>
                 <li
                   className={`${outfit.className} ml-2 marker:text-[#7b284fff]`}
                 >
                   <span className={`${outfit.className} font-bold ml-4`}>
-                    Preparation:
-                  </span>{" "}
+                    Preparation:{" "}
+                  </span>
                   5 minutes
                 </li>
                 <li
                   className={`${outfit.className} ml-2 marker:text-[#7b284fff]`}
                 >
                   <span className={`${outfit.className} font-bold ml-4`}>
-                    {" "}
-                    Cooking:
-                  </span>{" "}
+                    Cooking:{" "}
+                  </span>
                   5 minutes
                 </li>
               </ul>
@@ -63,7 +62,6 @@ export default function Home() {
             <h1
               className={`${youngSerif.className} text-[32px] text-[#7b284fff] pt-4 pb-4`}
             >
-              {" "}
               Ingredients
             </h1>
             <ul className="list-disc list-outside pl-6 space-y-1">
@@ -105,7 +103,7 @@ export default function Home() {
               className={`${outfit.className} list-decimal list-outside pl-6 marker:text-[#7b284fff] font-bold`}
             >
               <li className="pl-2 pb-2">
-                Beat the eggs:
+                Beat the eggs:{" "}
                 <span className="font-normal">
                   In a bowl, beat the eggs with a pinch of salt and pepper until
                   they are well mixed. You can add a tablespoon of water or milk
@@ -113,19 +111,17 @@ export default function Home() {
                 </span>
               </li>
               <li className="pl-2 pb-2">
-                Heat the pan:
+                Heat the pan:{" "}
                 <span className="font-normal">
-                  {" "}
                   Place a non-stick frying pan over medium heat and add butter
                   or oil.
                 </span>
               </li>
               <li className="pl-2 pb-2">
-                Cook the omelette:
+                Cook the omelette:{" "}
                 <span className="font-normal">
-                  {" "}
                   Once the butter is melted and bubbling, pour in the eggs. Tilt
-                  the pan to ensure the eggs evenly coat the surface.{" "}
+                  the pan to ensure the eggs evenly coat the surface.
                 </span>
               </li>
               <li className="pl-2 pb-2">
@@ -137,7 +133,7 @@ export default function Home() {
                 </span>
               </li>
               <li className="pl-2 pb-2">
-                Fold and serve:
+                Fold and serve:{" "}
                 <span className="font-normal">
                   As the omelette continues to cook, carefully lift one edge and
                   fold it over the fillings. Let it cook for another minute,
@@ -191,7 +187,7 @@ export default function Home() {
             </table>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }
