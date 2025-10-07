@@ -1,103 +1,197 @@
-import Image from "next/image";
+import { Young_Serif, Outfit } from "next/font/google";
+
+const youngSerif = Young_Serif({ subsets: ["latin"], weight: ["400"] });
+const outfit = Outfit({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <>
+      <div className="w-full h-full bg-[#f3e6d8ff] flex justify-center items-center sm:pt-[10vh] sm:pb-[10vh]">
+        <div className="w-3xl h-full bg-white rounded-2xl overflow-hidden">
+          <div className="sm:p-10 sm:pb-0">
+            <img
+              src="/assets/images/image-omelette.jpeg"
+              alt="Omelette"
+              className="w-full rounded-2xl"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="p-10 pt-4">
+            <h1
+              className={`${youngSerif.className} text-[32px] font-bold mt-4 mb-4`}
+            >
+              Simple Omelette Recipe
+            </h1>
+            <p className={`${outfit.className} font-normal mb-8`}>
+              An easy and quick dish, perfect for any meal. This classic
+              omelette combines beaten eggs cooked to perfection, optionally
+              filled with your choice of cheese, vegetables, or meats.
+            </p>
+            <div className="p-6 rounded-2xl bg-[#fff5faff]">
+              <h3
+                className={`${outfit.className} font-bold text-[#7b284fff] pb-2 text-[18px]`}
+              >
+                Preparation time{" "}
+              </h3>
+              <ul className="list-disc list-inside space-y-1">
+                <li
+                  className={`${outfit.className} ml-2 marker:text-[#7b284fff]`}
+                >
+                  <span className={`${outfit.className} font-bold ml-4`}>
+                    Total:
+                  </span>{" "}
+                  Approximately 10 minutes
+                </li>
+                <li
+                  className={`${outfit.className} ml-2 marker:text-[#7b284fff]`}
+                >
+                  <span className={`${outfit.className} font-bold ml-4`}>
+                    Preparation:
+                  </span>{" "}
+                  5 minutes
+                </li>
+                <li
+                  className={`${outfit.className} ml-2 marker:text-[#7b284fff]`}
+                >
+                  <span className={`${outfit.className} font-bold ml-4`}>
+                    {" "}
+                    Cooking:
+                  </span>{" "}
+                  5 minutes
+                </li>
+              </ul>
+            </div>
+            <h1
+              className={`${youngSerif.className} text-[32px] text-[#7b284fff] pt-4 pb-4`}
+            >
+              {" "}
+              Ingredients
+            </h1>
+            <ul className="list-disc list-outside pl-6 space-y-1">
+              <li
+                className={`${outfit.className} pl-4 marker:text-[#7b284fff]`}
+              >
+                2-3 large eggs
+              </li>
+              <li
+                className={`${outfit.className} pl-4  marker:text-[#7b284fff]`}
+              >
+                Salt, to taste
+              </li>
+              <li
+                className={`${outfit.className} pl-4  marker:text-[#7b284fff]`}
+              >
+                Pepper, to taste
+              </li>
+              <li
+                className={`${outfit.className} pl-4 marker:text-[#7b284fff]`}
+              >
+                1 tablespoon of butter or oil
+              </li>
+              <li
+                className={`${outfit.className} pl-4 marker:text-[#7b284fff]`}
+              >
+                Optional fillings: cheese, diced vegetables, cooked meats, herbs
+              </li>
+            </ul>
+
+            <hr className="h-px bg-gray-300 border-0 mt-10 mb-4"></hr>
+            <h1
+              className={`${youngSerif.className} text-[32px] text-[#7b284fff] pt-4 pb-4`}
+            >
+              Instructions
+            </h1>
+
+            <ol
+              className={`${outfit.className} list-decimal list-outside pl-6 marker:text-[#7b284fff] font-bold`}
+            >
+              <li className="pl-2 pb-2">
+                Beat the eggs:
+                <span className="font-normal">
+                  In a bowl, beat the eggs with a pinch of salt and pepper until
+                  they are well mixed. You can add a tablespoon of water or milk
+                  for a fluffier texture.
+                </span>
+              </li>
+              <li className="pl-2 pb-2">
+                Heat the pan:
+                <span className="font-normal">
+                  {" "}
+                  Place a non-stick frying pan over medium heat and add butter
+                  or oil.
+                </span>
+              </li>
+              <li className="pl-2 pb-2">
+                Cook the omelette:
+                <span className="font-normal">
+                  {" "}
+                  Once the butter is melted and bubbling, pour in the eggs. Tilt
+                  the pan to ensure the eggs evenly coat the surface.{" "}
+                </span>
+              </li>
+              <li className="pl-2 pb-2">
+                Add fillings (optional):{" "}
+                <span className="font-normal">
+                  When the eggs begin to set at the edges but are still slightly
+                  runny in the middle, sprinkle your chosen fillings over one
+                  half of the omelette.
+                </span>
+              </li>
+              <li className="pl-2 pb-2">
+                Fold and serve:
+                <span className="font-normal">
+                  As the omelette continues to cook, carefully lift one edge and
+                  fold it over the fillings. Let it cook for another minute,
+                  then slide it onto a plate.
+                </span>
+              </li>
+              <li className="pl-2 pb-2">
+                Enjoy:{" "}
+                <span className="font-normal">
+                  Serve hot, with additional salt and pepper if needed.
+                </span>
+              </li>
+            </ol>
+            <hr className="h-px bg-gray-300 border-0 mt-4 "></hr>
+            <h1
+              className={`${youngSerif.className} text-[32px] text-[#7b284fff] pt-4 pb-4`}
+            >
+              Nutrition
+            </h1>
+            <p className={`${outfit.className} font-normal mb-4`}>
+              The table below shows nutritional values per serving without the
+              additional fillings.
+            </p>
+            <table className={`${outfit.className} w-full h-46`}>
+              <tbody>
+                <tr className="border-b border-[#e4ded8ff]">
+                  <td className="w-1/2 text-semibold pl-8 py-1">Calories</td>
+                  <td className={`w-1/2 text-[#7b284fff] font-bold py-1`}>
+                    277kcal
+                  </td>
+                </tr>
+                <tr className="border-b border-[#e4ded8ff]">
+                  <td className="w-1/2 text-semibold pl-8 py-1">Carbs</td>
+                  <td className={`w-1/2 text-[#7b284fff] font-bold py-1`}>
+                    0g
+                  </td>
+                </tr>
+                <tr className="border-b border-[#e4ded8ff]">
+                  <td className="w-1/2 text-semibold pl-8 py-1">Protein</td>
+                  <td className={`w-1/2 text-[#7b284fff] font-bold py-1`}>
+                    20g
+                  </td>
+                </tr>
+                <tr className="">
+                  <td className="w-1/2 text-semibold pl-8 py-1">Fat</td>
+                  <td className={`w-1/2 text-[#7b284fff] font-bold py-1`}>
+                    22g
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }
